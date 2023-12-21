@@ -1,0 +1,89 @@
+Barbell Strategy
+================
+
+Author: Owocki
+Original Doc: https://docs.google.com/document/d/1ijI6IC2BUVqRKThxn4ZPaalLtMwA4hPNERymDCTqolA/edit
+
+Web3 offers new financial models.  
+
+Gone are the days of the past where an organization could only be valued on a rational basis by the amount of revenue it had coming in the door \* p/e ratios.
+
+Web3 offers the ability to create utility tokens that have utility within crypto networks.  These utility offer utility to end users who hold the tokens[\[a\]](#cmnt1).  A great example is RPL - in the rocketpool network, node operators can stake RPL in order to be able to run a minipool with 8 ETH - way less ETH than is required to run a node (32 ETH).  In this network, the sum demand for this utility is what determines the FDV of the network. The FDV of RPL is $[500m](https://www.google.com/url?q=https://www.coingecko.com/en/coins/rocket-pool&sa=D&source=editors&ust=1703179676038851&usg=AOvVaw1ZM29IUFhyZ-F6xIGVRUX4), without ever making a dime of revenue.
+
+There are many opportunities to insert GTC utility into the Gitcoin Network
+
+*   Staking on sybil resistance
+*   Staking on the quality of a grant
+*   Staking on a Grant Round
+*   Repurposing the above use cases to allow any of our partners to allow staking in their native governance token (say perhaps, that partner must stake some GTC to whitelist their token).
+
+Although we have conviction that GTC staking is a possible way to construct the network, we do not yet have conviction about it’s relative priority as a strategy vs revenue.  The purpose of this document is to suggest a way to resolve the impasse.
+
+We are not sure whether (1) taking in proceeds from revenue or (2) GTC Staking is the best revenue model for Gitcoin -- This document proposes that we start with some combination of both, letting customers decide[\[b\]](#cmnt2).
+
+One thing we've discussed is having a barbell strategy.  This is what the barbell looks like:
+
+Pay with                                     GTC
+
+$$$$                                        Staking
+
+◘█━━━━━━━━━━━━━━█◘
+
+You can either pay $$$ to use the products (left side of the barbell) or you can stake GTC (right side of the barbell) + become a stakeholder in the ecosystem.
+
+[\[c\]](#cmnt3)[\[d\]](#cmnt4)[\[e\]](#cmnt5)[\[f\]](#cmnt6)
+
+This barbell strategy offers multiple options for a community to create value for Gitcoin
+
+1.  Either by directing paying for the services received, (left side of barbell)
+2.  or making a commitment to the Gitcoin Ecosystem through staking[\[g\]](#cmnt7) (right side of barbell).
+
+Example: Once a fee switch has been turned on, a customer of Grants Stack, Allo, or Passport, could decide between staking y\*stake\_ratio GTC in order to access network utility worth $z... Or they could pay z\*fee\_ratio DAI in order to run a round worth $z...
+
+How do we determine stake\_ratio and fee\_ratio?  TBD, likely differs on a product by product basis- but some ways to start might be
+
+1.  Doing lightweight market tests of different staking ratios in market (and perhaps giving sales reps “coupons” in case their prices are too high).
+2.  Researching what other protocols are doing (RPL, you must stake 2.4 ETH worth of RPL to access lending of 24 ETH  )
+3.  Figuring out how much GTC is sloshing around in market.
+
+We have some time to figure out what these ratios are while the Gitcoin economy is still small.  If the GMV of Gitcoin in Q4 2023 is $1.5m in Grants Stack GMV + $1m cost of forgery[\[h\]](#cmnt8)[\[i\]](#cmnt9) in Passport, for a total economy size of $2.5m… it likely matters not if the stake\_ratio or fee\_ratio is 0 or 0.0001 - because the amount of captured value is $2.5m \* 0.0001 = $250.  Once the economy has grown 10x or 100x, that's when we start to really be monetizable.
+
+[\[a\]](#cmnt_ref1)utility
+
+[\[b\]](#cmnt_ref2)Is it customers who will ultimately decide? Or maybe it's the DAO/DAO token holders based on how both strategies perfect.
+
+Maybe you mean "customers" as in "let's let the market decide" in which case I would suggest that wording instead
+
+[\[c\]](#cmnt_ref3)it feels like one thing we're missing here is how the barbell strategy applies to recurring revenue (which i think is a cornerstone of GS financial viability.) instead of getting charged $20 each time, do i have to stake 20 \_more\_ GTC each time? or just keep my original 20 GTC staked? is that viable?
+
+[\[d\]](#cmnt_ref4)great point. 
+
+recurring funding is powerful bc it allows us to set default behaviours that (web2 example) move from having to have a user choose to purchase every month to purchasing every month by default.  thus increasing LTV (lifetime value) of a newly converted paying user. 
+
+let me try to translate that reasoning to web3.
+
+i think staking is actually easier for recurring funding insofar as you just dont unstake your GTC to keep "paying".  we should just aim to have ppl who pay by staking their GTC keep their GTC staked + not unstake. 
+
+the hard thing imo is recurring funding on the left side of the barbell.  perhaps we could use something like EIP 1337 (subscriptions on chain) to get people paying in a recurring way.. but thats not a pattern ppl are familiar with in web3 at the moment!
+
+[\[e\]](#cmnt_ref5)i think there's a few protocols/apps that enable recurring funding in crypto -- i'm not worried about feasibility of that
+
+i'm not sure that the staking model adequately captures value though -- say customer A runs a 50k round in jan, 60k in feb, 100k in march... we get to the end of the q and they have "100" gtc staked? and then can immediately unstake?
+
+[\[f\]](#cmnt_ref6)well some value is captured while the supply is locked up, but maybe not as much as scarce tokens transferring from the partner wallet to gitcoin's.   so i think the stake\_ratio would need to be adjusted to deal with that scenario.
+
+or maybe some sort of veGTC would be better mechanism. incentivizing people to stake longer + receive more benefits the longer they stake.  as soon as they unstake, the veGTC resets its age to zero.
+
+(veGTC is a mechanism where the longer you stake the more voting power you have. eg 1 GTC staked for 1 month = 1 voting unit, 1 GTC staked for 20 months = 20 voting untis)
+
+[\[g\]](#cmnt_ref7)Not to open a new conversation, mostly just curious and unaware - why are we set on staking vs. straight-up burning tokens?
+
+Again, mostly curious and wanting to understand the mechanics wrt our long term sustainability.
+
+[\[h\]](#cmnt_ref8)how do you define cost of forgery?
+
+[\[i\]](#cmnt_ref9)Personhood Score = cost of forgery = the cost in USD it would take to forge a users identity
+
+TCF = Total Cost of Forgery in the system, the ultimate KPI that the DAO shoots for to bootstrap a sybil resistant economy.
+
+more here https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235#ok-but-what-next-17
